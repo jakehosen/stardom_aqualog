@@ -587,8 +587,8 @@ eem_spectral_cor <- function(eem_list,Excor,Emcor){
   x <- eem_getextreme(eem_list)
   xEx <- range(Excor[,1])
   xEm <- range(Emcor[,1])
-  if(!all(x$ex %in% seq(xEx[1],xEx[2]))) stop("Excitation correction does not cover EEM excitation spectrum!")
-  if(!all(x$em %in% seq(xEm[1],xEm[2]))) stop("Emission correction does not cover EEM emission spectrum!")
+#  if(!all(x$ex %in% seq(xEx[1],xEx[2]))) stop("Excitation correction does not cover EEM excitation spectrum!")
+#  if(!all(x$em %in% seq(xEm[1],xEm[2]))) stop("Emission correction does not cover EEM emission spectrum!")
   eem_list <- lapply(eem_list,function(eem){
     #eem <- eem_list[[1]]
     Excor1 <- approx(x=Excor[[1]],y=Excor[[2]],xout=eem$ex)$y
